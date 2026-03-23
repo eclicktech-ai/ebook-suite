@@ -4,13 +4,11 @@
 
 ## `expert/`
 
-来自 `eclicktech-ai/expert_readed_books`：按主题分类的专家/工程师向书单（含 `README.md`、`icons/` 与各分类目录）。内部路径保持原仓库结构。
-
-详情与分区说明：[`expert/README.md`](./expert/README.md) · [仓库根 README](../README.md)（合并版总说明）
+按主题分类的书单（工程/通识），含 `README.md`、`icons/`、`list.png` 与各分类子目录。详见 [`expert/README.md`](./expert/README.md)。
 
 ## `personal/`
 
-个人收藏与设备侧书单，与 `expert/` 的「主题分类」相互独立。
+个人藏书与设备侧书单，与 `expert/` 的主题分类相互独立。
 
-- **`mybooks/`**：来自 `mybooks` 仓库；电子书按 `by-format/{epub,mobi,pdf,azw3}` 存放。
-- **`ibooks-iphone/`**：来自 `ibooks` 仓库根目录的 EPUB/PDF（不含铃声）。短说明见 [`ibooks-iphone/README.md`](./personal/ibooks-iphone/README.md)。
+- **`mybooks/`**：个人已读/在读；推荐 `by-format/{epub,mobi,pdf,azw3}`（见根 README）。
+- **`ibooks-iphone/`**：EPUB/PDF 为主。说明见 [`ibooks-iphone/README.md`](./personal/ibooks-iphone/README.md)。
