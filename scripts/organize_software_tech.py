@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Classify files in library/expert/软件技术/ by filename; print git mv commands. Run from ebook-suite root."""
+"""Move files from library/expert/tech-inbox/ into topic dirs under library/expert/. Run from ebook-suite root."""
 import os
 import subprocess
 import sys
 
-BASE = os.path.join("library", "expert", "软件技术")
+INBOX = os.path.join("library", "expert", "tech-inbox")
+EXPERT = os.path.join("library", "expert")
 
 
 def bucket(name: str) -> str:
@@ -120,16 +121,23 @@ def bucket(name: str) -> str:
 
 def main() -> None:
     root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    tech = os.path.join(root, BASE)
+    inbox = os.path.join(root, INBOX)
+    expert = os.path.join(root, EXPERT)
     os.chdir(root)
 
+    if not os.path.isdir(inbox):
+        print(f"missing inbox: {inbox}", file=sys.stderr)
+        sys.exit(1)
+
     moves: list[tuple[str, str]] = []
-    for name in os.listdir(tech):
-        src = os.path.join(tech, name)
+    for name in os.listdir(inbox):
+        if name == "README.md":
+            continue
+        src = os.path.join(inbox, name)
         if not os.path.isfile(src):
             continue
         b = bucket(name)
-        dst_dir = os.path.join(tech, b)
+        dst_dir = os.path.join(expert, b)
         dst = os.path.join(dst_dir, name)
         if os.path.exists(dst):
             print(f"skip exists: {dst}", file=sys.stderr)
@@ -141,6 +149,9 @@ def main() -> None:
         os.makedirs(os.path.dirname(os.path.join(root, b)), exist_ok=True)
         subprocess.run(["git", "mv", a, b], check=True, cwd=root)
         print(f"mv {a} -> {b}")
+
+    if not moves:
+        print("no files to move in tech-inbox (README.md ignored)")
 
 
 if __name__ == "__main__":
