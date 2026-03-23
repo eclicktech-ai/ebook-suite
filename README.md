@@ -2,6 +2,12 @@
 
 个人电子书与相关资源的统一存放仓库，由以下三个来源合并整理而来（**未保留原仓库 Git 历史**）。
 
+**文档导航**：[docs/README.md](./docs/README.md) · [docs/product/README.md](./docs/product/README.md)（定位与边界） · [library/README.md](./library/README.md)
+
+---
+
+### 历史与同步（迁移与 GitHub）
+
 **迁移状态（本机已落盘）**：`mybooks`、`ibooks` 已从 `/tmp/ebook-suite-inspect` 拷贝整理；`expert_readed_books` 已从临时完整克隆同步至 `library/expert/`（约 595 个文件）。若你在其他路径有更新版本，可对对应目录做增量覆盖。
 
 **GitHub 同步**：电子书与铃声已纳入 Git 跟踪（已去掉对 `*.pdf` 等的忽略）。因 GitHub **单次接收 pack 约 2GB 上限**，历史上传被拆成多次提交（personal → expert 各分类 → `软件技术` 分两段等）。若以后再次大量新增，请分批 `commit` + `push`。
