@@ -1,7 +1,2 @@
-# 若在独立仓库 `ebook-suite` 中需要 Git 跟踪以下电子书与铃声，可删除本文件或按需注释。
-# 放在 mamba-engage 主仓库中时，避免误提交超大二进制。
-*.pdf
-*.epub
-*.mobi
-*.azw3
-*.m4r
+# Standalone ebook-suite: ebooks and ringtones are tracked in this repo.
+# (Previously ignored *.pdf/*.epub/etc. so GitHub only had READMEs — removed.)
