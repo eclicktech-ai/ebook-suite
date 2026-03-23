@@ -1,8 +1,11 @@
 # ebook-suite
 
-个人电子书与少量相关资源（如铃声）的整理库，按用途分目录存放。
+个人或团队整理的电子书与相关资源（含铃声等非图书文件），按目录存放；**与业务代码无依赖**，可单独 clone、单独维护。
 
-**文档**：[docs/README.md](./docs/README.md) · [docs/product/README.md](./docs/product/README.md) · [library/README.md](./library/README.md)
+- **是**：主题书单（`library/expert/`）、个人书库（`library/personal/`）、媒体（`media/`）。
+- **不是**：后端、前端或 CI 构建的一部分。
+
+细分与分类索引见 [library/expert/README.md](library/expert/README.md)。
 
 ---
 
@@ -20,13 +23,11 @@
 ```text
 ebook-suite/
 ├── README.md
-├── docs/
 ├── library/
 │   ├── expert/
-│   ├── personal/
-│   │   ├── mybooks/
-│   │   └── ibooks-iphone/
-│   └── README.md
+│   └── personal/
+│       ├── mybooks/
+│       └── ibooks-iphone/
 └── media/
     └── ringtones/
         └── maplestory-bgm/
@@ -36,7 +37,7 @@ ebook-suite/
 
 ### `library/expert/`
 
-工程师与通识向书单，涵盖计算机科学、软件技术、软件工程、创业、思想、数学等；**以子文件夹内实际文件为准**。细分与索引见 [library/expert/README.md](library/expert/README.md)。
+工程师与通识向书单，涵盖计算机科学、软件技术、软件工程、创业、思想、数学等；**以子文件夹内实际文件为准**。分类目录表见 [library/expert/README.md](library/expert/README.md)。
 
 ### `library/personal/mybooks/`
 
@@ -53,7 +54,7 @@ ebook-suite/
 
 ### `library/personal/ibooks-iphone/`
 
-以 EPUB 为主；书单为个人挑选。说明见 [ibooks-iphone/README.md](library/personal/ibooks-iphone/README.md)。
+以 EPUB 为主；书单为个人挑选（如 2012–2018 期间收集）。铃声放在 `media/ringtones/maplestory-bgm/`，与图书分开。
 
 ### `media/ringtones/maplestory-bgm/`
 
