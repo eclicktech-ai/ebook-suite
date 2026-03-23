@@ -5,5 +5,7 @@
 | 文档 | 说明 |
 |------|------|
 | [product/README.md](./product/README.md) | 仓库定位、边界与导航 |
-| [根目录 README.md](../README.md) | 来源对照表、目录树、迁移规则、GitHub 推送说明、版权、自检命令、旧仓处理 |
-| [library/README.md](../library/README.md) | `library/expert` 与 `library/personal` 分工说明 |
+| [根目录 README.md](../README.md) | 总览：**各分区说明**（expert / mybooks / ibooks-iphone）、来源对照、迁移规则、GitHub、版权、自检 |
+| [library/README.md](../library/README.md) | `library/expert` 与 `library/personal` 分工 |
+| [library/expert/README.md](../library/expert/README.md) | expert 子目录索引表（短） |
+| [library/personal/ibooks-iphone/README.md](../library/personal/ibooks-iphone/README.md) | ibooks 分区短说明（指向根 README） |

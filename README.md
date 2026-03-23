@@ -6,9 +6,30 @@
 
 ---
 
+## 各分区说明（合并自原各目录 README）
+
+### `library/expert/`（专家书单）
+
+推荐工程师与一般通识阅读的读本，涵盖计算机科学、软件技术、软件工程、创业、思想、数学等方向；**以本目录下子文件夹中的文件为准**。
+
+- 喜欢的书请购买**正版**；电子书仅便于收藏与检索，不能替代对知识的系统学习。
+- 若认为内容侵权，请通过 Issue 说明，将及时处理。
+
+### `library/personal/mybooks/`
+
+个人已读/在读收藏；当前推荐按 `by-format/{epub,mobi,pdf,azw3}` 存放（详见下文「分类与迁移规则」）。
+
+### `library/personal/ibooks-iphone/`（原 ibooks）
+
+- 以 **EPUB** 为主，便于导入 iPhone iBooks；若需 Kindle 等格式可自行转换。
+- 书单为个人挑选、读完后觉得有意思的书。
+- 原仓库 **`ibells/` 铃声**（冒险岛 BGM 等）已单独放在 [`media/ringtones/maplestory-bgm/`](./media/ringtones/maplestory-bgm/)，与电子书分离。
+
+---
+
 ### 历史与同步（迁移与 GitHub）
 
-**迁移状态（本机已落盘）**：`mybooks`、`ibooks` 已从 `/tmp/ebook-suite-inspect` 拷贝整理；`expert_readed_books` 已从临时完整克隆同步至 `library/expert/`（约 595 个文件）。若你在其他路径有更新版本，可对对应目录做增量覆盖。
+**迁移状态（本机已落盘）**：`mybooks`、`ibooks` 已从临时克隆目录拷贝整理；`expert_readed_books` 已同步至 `library/expert/`（约 595 个文件级对象）。若你在其他路径有更新版本，可对对应目录做增量覆盖。
 
 **GitHub 同步**：电子书与铃声已纳入 Git 跟踪（已去掉对 `*.pdf` 等的忽略）。因 GitHub **单次接收 pack 约 2GB 上限**，历史上传被拆成多次提交（personal → expert 各分类 → `软件技术` 分两段等）。若以后再次大量新增，请分批 `commit` + `push`。
 
@@ -25,22 +46,23 @@
 ```text
 ebook-suite/
 ├── README.md
+├── docs/
 ├── library/
-│   ├── expert/                 # expert_readed_books 整仓内容（内部子文件夹名不变）
+│   ├── expert/                 # expert_readed_books；见 expert/README.md
 │   ├── personal/
-│   │   ├── mybooks/            # mybooks（可选 by-format/ 按扩展名分桶）
-│   │   └── ibooks-iphone/      # ibooks 仓库根目录的 epub/pdf 等（不含 ibells）
-│   └── README.md               # 可选：expert 与 personal 的说明
+│   │   ├── mybooks/
+│   │   └── ibooks-iphone/
+│   └── README.md
 └── media/
     └── ringtones/
-        └── maplestory-bgm/     # 原 ibooks/ibells 下的 .m4r
+        └── maplestory-bgm/
 ```
 
 ## 分类与迁移规则
 
 ### 1. `library/expert/`（原 expert_readed_books）
 
-- **规则**：**整棵目录迁入**，不拆、不重命名内部的 `计算机科学类/`、`人物传/`、`icons/` 等。
+- **规则**：**整棵目录迁入**，不拆、不重命名内部的各分类目录与 `icons/` 等。
 - **操作**：将原仓库除 `.git` 外的全部内容复制到 `library/expert/`。
 
 ### 2. `library/personal/mybooks/`（原 mybooks）
@@ -54,14 +76,13 @@ ebook-suite/
   | `.pdf` | `by-format/pdf/` |
   | `.azw3` | `by-format/azw3/` |
 
-- **原 README**：放在 `library/personal/mybooks/README.md`。
+- **原 README**：`library/personal/mybooks/README.md`（若保留简短说明可指向本文件）。
 - **备选**：若不想按格式分，可将原仓库文件**原样**放在 `library/personal/mybooks/`（不建 `by-format/`）。
 
 ### 3. `library/personal/ibooks-iphone/` 与 `media/`（原 ibooks）
 
 - **电子书**：原仓库**根目录**下的 `.epub`、`.pdf`（及其他电子书扩展名）→ `library/personal/ibooks-iphone/`。
-- **铃声**：原 `ibells/` 下全部 `.m4r` → `media/ringtones/maplestory-bgm/`（与电子书分离）。
-- **原 README**：可放在 `ibooks-iphone/README.md` 或合并进本文件，并注明铃声新路径。
+- **铃声**：原 `ibells/` 下全部 `.m4r` → `media/ringtones/maplestory-bgm/`。
 
 ## 版权与使用说明
 
@@ -73,7 +94,6 @@ ebook-suite/
 在已完成的 `ebook-suite` 根目录：
 
 ```bash
-# 各顶层目录是否存在
 test -d library/expert library/personal/mybooks library/personal/ibooks-iphone media/ringtones/maplestory-bgm
 ```
 

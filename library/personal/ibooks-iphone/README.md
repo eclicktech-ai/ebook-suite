@@ -1,9 +1,7 @@
-# ibooks 
+# `ibooks-iphone/`
 
-#### && ibells
+2012–2018 期间阅读的 **EPUB/PDF** 收藏（偏 iPhone iBooks）；书单为个人挑选。
 
-2012-2018读过的电子书 && 手机上的铃声合集(冒险岛音乐)
+- 原仓库中的 **铃声**（冒险岛 BGM 等 `.m4r`）已迁至 [`media/ringtones/maplestory-bgm/`](../../../media/ringtones/maplestory-bgm/)。
 
-- 电子数EPUB格式  支持导入iphone ibooks 个人比较感觉ibooks阅读体验比较好  kindle的朋友可能需要转格式  在线转格式网站: http://cn.epubee.com/epub%E8%BD%ACmobi.html 
-- 书单都是经过本人挑选之后的   读完后感觉比较有意思的书
-- ibells 是手机里面的铃声备份  都是冒险岛的BGM 超好听哟
+**完整说明**（迁移规则、格式与版权）：见 [仓库根 README](../../../README.md)。
