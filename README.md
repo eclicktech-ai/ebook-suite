@@ -23,6 +23,8 @@
 ```text
 ebook-suite/
 ├── README.md
+├── scripts/
+│   └── organize_software_tech.py   # 按文件名将 library/expert/软件技术/ 顶层文件归入子目录
 ├── library/
 │   ├── expert/
 │   └── personal/
